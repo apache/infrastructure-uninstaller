@@ -18,3 +18,11 @@ completely if found, by:
 - removing the application main directory
 - reloading systemd
 - resetting any found failures in systemd
+
+It may be installed on one or more nodes via pipservice, as such:
+
+~~~yaml
+pipservice:
+   uninstaller:
+     tag: master
+~~~
