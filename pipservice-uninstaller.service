@@ -1,0 +1,12 @@
+[Unit]
+Description=ASF Infra app uninstaller
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/uninstaller
+ExecStart=/usr/local/bin/pipenv run python3 uninstaller.py
+RemainAfterExit=true
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
